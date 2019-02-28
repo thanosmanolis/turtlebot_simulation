@@ -99,13 +99,13 @@
 
   <xacro:macro name="stack_3d_sensor_pole" params="parent number x_loc y_loc z_loc">
     <joint name="pole_kinect_${number}_joint" type="fixed">
-      <origin xyz="${x_loc} ${y_loc} ${z_loc}" rpy="0.174 0 0"/>
+      <origin xyz="${x_loc} ${y_loc} ${z_loc}" rpy="0 0 0"/>
       <parent link="${parent}"/>
       <child link="pole_kinect_${number}_link"/>
     </joint>
     <link name="pole_kinect_${number}_link">
       <visual>
-        <origin xyz="0 0 -0.01" rpy="0 0 0"/>
+        <origin xyz="0.174 0 -0.01" rpy="0 0 0"/>
         <geometry>
           <mesh filename="package://turtlebot_description/meshes/sensors/sensor_pole.dae" />
         </geometry>
